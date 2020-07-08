@@ -156,7 +156,7 @@
                             </div>
                             <img src="{{ ar.thumbnail.url }}" alt="">
                             <div class="tags">
-                                {% for cat in ar.category_published.all%}
+                                {% for cat in ar.category_published.all %}
                                 <a href="{% url 'blog:category_list' cat.slug %}" class="nav-post">{{cat.title}}</a>
                                 {% endfor %}
                             </div>
