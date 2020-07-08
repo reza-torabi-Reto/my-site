@@ -1,0 +1,398 @@
+@font-face {
+    font-family: t;
+    src: url(../fonts/Tanha.ttf);
+}
+
+@font-face {
+    font-family: s;
+    src: url(../fonts/Sahel.ttf);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+a:hover,
+button:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* hover */
+.my-abt button:hover {
+    background-color: #fff;
+    color: red;
+}
+
+.bg-green-1 {
+    background-color: rgb(0, 0, 0);
+}
+
+.green-1 {
+    color: rgb(57, 101, 112);
+}
+
+.white {
+    color: white !important;
+}
+
+.font-13 {
+    font-size: 13px;
+}
+
+body {
+    direction: rtl;
+    font-family: t;
+    background: #2043ff;
+}
+
+
+/* header */
+.nav-link {
+    font-size: 13px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-toggle i {
+    font-size: 10px;
+}
+
+.dropdown-menu {
+    text-align: right;
+    left: initial;
+}
+
+
+/* my info */
+
+.cf-info {
+    background: #f2f2f2;
+    min-height: 300px;
+    padding: 0 20%;
+}
+
+.my-abt {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.my-abt p {
+    text-align: justify;
+    font-size: 15px;
+}
+
+.my-abt button {
+    transition: .5s;
+    width: 240px;
+    padding: 6px;
+    background-color: #f00;
+    color: white;
+    border: none;
+    box-shadow: 0px 0px 3px 1px black;
+}
+
+.my-img {
+    text-align: center;
+}
+
+.my-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.ttl-page {
+    text-align: center;
+    margin-top: 10px;
+    display: none;
+}
+
+.ttl-page span {
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 8px 8px;
+    font-size: 13px;
+}
+
+/* slider-header */
+.carousel-indicators {
+    bottom: 0px;
+    margin-bottom: 0;
+}
+
+.carousel-indicators li {
+    background-color: blue;
+}
+
+/* about box */
+.box-abt {
+    width: 100%;
+    background-color: #fff;
+    margin: 20px auto;
+    border-radius: 4px;
+    padding: 10px 0;
+}
+
+/* post */
+.s-post {
+    border-bottom: 1px solid #cdcdcd;
+    padding: 0 8px 15px;
+    width: 100%;
+    margin: 0 auto 20px;
+}
+
+.ttl-post {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.nav-post {
+    margin-left: 0px;
+    font-size: 10px;
+    background-color: #d4d8d6;
+    padding: 2px 10px;
+    border-radius: 4px;
+    color: #000;
+}
+
+.h-post a {
+    color: #000;
+}
+.s-post h2 {
+    text-align: right;
+    padding-right: 5px;
+    font-size: 24px;
+}
+
+
+.s-post img {
+    width: 100%;
+    height: 400px;
+    border-bottom: 1px solid #f8f8f8;
+    border-top: 1px solid #f8f8f8;
+}
+
+.tags {
+    text-align: right;
+    margin: 2px 0;
+}
+
+.s-post p {
+    text-align: justify;
+    padding: 5px 30px;
+    line-height: 1.8;
+}
+
+.a-more {
+    margin-left: 10px;
+    background-color: #000;
+    padding: 5px 29px;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 0 0 2px 0px #0f0f0f;
+}
+
+.ftr-post ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-right: 10px;
+    flex-direction: row;
+}
+
+.ftr-post li {
+    margin-left: 10px;
+}
+
+.pagging ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    list-style: none;
+    flex-direction: row;
+}
+
+.pagging li {
+    margin: 0 5px;
+}
+
+.pagging a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 4px;
+}
+
+.a-active {
+    background-color: #d9d9de;
+}
+
+/* aside post */
+
+aside {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+aside p {
+    width: 75%;
+    text-align: justify;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.frm-srch {
+    text-align: right;
+    margin: 5px 0 10px;
+    display: flex;
+    width: 80%;
+}
+
+.frm-srch form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.frm-srch input {
+    text-align: right;
+    background-color: #fafafa;
+    padding: 4px;
+    font-size: 13px;
+    width: 80%;
+    border: 1px solid antiquewhite;
+    height: 30px;
+    margin: 0;
+}
+
+.frm-srch button {
+    background-color: black;
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+}
+
+.frm-srch i {
+    color: #fff;
+    padding: 4px;
+}
+
+.links-list, .social-list  {
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    text-align: right;
+}
+.hdr-links-list {
+    text-align: center;
+}
+
+.links-list li a {
+    color: #26339f;
+    font-size: 13px;
+}
+
+.hdr-links-list a {
+    color: #4f1919 !important;
+    font-size: 18px !important;
+}
+
+.social-list li {
+    margin-bottom: 5px;
+}
+
+.social-list a {
+    font-size: 13px;
+    color: #26339f;
+    height: 21px;
+    display: flex;
+    align-items: center;
+}
+
+.social-list i {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+/* single page */
+.img-one-post {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%;
+}
+
+.s-one-post {
+    width: 100%;
+}
+
+.p-one-post {
+    width: 80%;
+    margin: auto;
+}
+
+.img-one-post h2 {
+    text-shadow: 0 0 4px #000;
+    padding: 0 40px;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 32px;
+    color: #fff;
+}
+/* list books */
+.s-books{margin: 10px 5px 30px;border-bottom: 1px solid #f4f4f4;padding-bottom: 10px;}
+.img-bks{}
+.img-bks img{width: 100%;max-width: 165px;}
+.main-bks{display: flex;flex-direction: column;height: 100%;justify-content: space-between;align-items: first baseline;}
+.main-bks h3{font-size: 20px;}
+.main-bks p{text-align: justify;font-size: 14px;line-height: 1.7;}
+.info-bks{width: 100%;display: flex;justify-content: space-between;align-items: center;}
+.info-bks ul{flex-direction: row;padding: 0;}
+.info-bks li{margin-left: 12px;font-size: 12px;}
+.info-bks i{}
+.info-bks button{}
+.info-bks button i{}
+/* media query */
+@media screen and (max-width: 992px) {
+    .navbar-nav {
+        padding-right: 0;
+        text-align: right;
+    }
+
+    .navbar-brand {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .my-abt {
+        align-items: center;
+    }
+}

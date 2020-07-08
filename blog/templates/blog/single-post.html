@@ -1,0 +1,45 @@
+{% extends 'blog/base.html' %}
+{% block title %} | {{article.title}} {% endblock %}
+{% block main %}
+ <!-- بخش اصلی -->
+ <div class="container">
+    <div class="row ">
+        <div class="col-12">
+            <div class="box-abt">
+                    <section class="s-post s-one-post">
+                        <div class="img-one-post" style=" background-image: url('{{article.thumbnail.url}}')">
+                            <h2>{{article.title}}</h2>
+                        </div>
+                        <div class="tags">
+                            <a href="#" class="nav-post">رویداها</a>
+                            <a href="#" class="nav-post">برنامه نویسی</a>
+                        </div>
+                        <p class="p-one-post">
+                            {{article.body|linebreaks}}
+                        </p>
+                        <div class="ftr-post">
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul>
+                                        <li>
+                                            <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                            رضا ترابی
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            {{article.jpublish}}
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                            {{article.jTimepublish}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
