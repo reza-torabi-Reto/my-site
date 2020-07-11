@@ -4,7 +4,7 @@ from extensions.utils import jalali_convert, peersian_time
 # ----->
 
 # my Managers
-class ArticleManager(models.Model):
+class ArticleManager(models.Manager):
     def published(self):
         return self.filter(status='p')
 
