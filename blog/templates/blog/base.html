@@ -1,5 +1,4 @@
-{% load static %}   
-{% load base_tags %}
+{% load static %} {% load base_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,20 +18,15 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-green-1">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon white"></span>
-                </button>
-                {% cate %}
-                <a class="navbar-brand white" href="#">{% title %}</a>
+                </button> {% cate %}
+                <a class="navbar-brand white" href="{% url 'blog:home'%}">{% title %}</a>
             </div>
         </nav>
     </header>
-   
-    {% block main %}
 
-    {% endblock %}
+    {% block main %} {% endblock %}
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
