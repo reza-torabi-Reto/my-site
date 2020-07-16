@@ -10,10 +10,9 @@ from django.shortcuts import render
 from .models import Article, Category
 
 # Views
-def home(request):
+def home(request, page=1):
     articles_list = Article.objects.published()
     _paginator = Paginator(articles_list, 2)
-    page = request.GET.get('page')
     articles = _paginator.get_page(page)
     context = {
         'articles': articles,

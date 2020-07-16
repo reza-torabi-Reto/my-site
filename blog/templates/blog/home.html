@@ -1,124 +1,36 @@
-{% extends 'blog/base.html' %}
-{% load static %}
-{% block main%}
+{% extends 'blog/base.html' %} {% load static %} {% block main%}
 <!-- اسلایدررر بالای صفحه -->
-    <div class="container-fluid d-flex align-items-center py-2 cf-info">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item ">
-                                <div class="row">
-                                    <section class="s-books">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="img-bks">
-                                                    <img src="" alt="" srcset="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="main-bks">
-                                                    <h3>دریافت کتاب آموزش جنگو</h3>
-                                                    <p>طرح‌نما یا لورم ایپسوم به متنی آزمایشی و بی‌معنی در صنعت چاپ،
-                                                        صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن
-                                                        به‌عنوان عنصری از ترکیب‌بندی برای پُر کردن صفحه و ارائهٔ اولیهٔ
-                                                        شکل ظاهری و کلیِ طرح سفارش‌گرفته‌شده‌استفاده می‌کند، تا ازنظر
-                                                        گرافیکی نشانگر چگونگی نوع</p>
-                                                    <div class="info-bks">
-                                                        <ul>
-                                                            <li>
-                                                                <i class="fa fa-user-circle" aria-hidden="true"></i>
-                                                                رضا ترابی
-                                                            </li>
-                                                            <li>
-                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                                20 خرداد 1399
-                                                            </li>
-                                                            <li>
-                                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                                                15:09
-                                                            </li>
-                                                        </ul>
-                                                        <button class="btn btn-success"><i class="fa fa-download"
-                                                                aria-hidden="true"></i>
-                                                            دریافت</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-                            </div>
-                            <div class="carousel-item active">
+<div class="container-fluid d-flex align-items-center py-2 cf-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item ">
+                            <div class="row">
                                 <section class="s-books">
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="img-bks">
-                                                <img src="images/b1.jpg" alt="" srcset="">
+                                                <img src="" alt="" srcset="">
                                             </div>
                                         </div>
                                         <div class="col-md-8">
                                             <div class="main-bks">
                                                 <h3>دریافت کتاب آموزش جنگو</h3>
-                                                <p>طرح‌نما یا لورم ایپسوم به متنی آزمایشی و بی‌معنی در صنعت چاپ،
-                                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن
-                                                    به‌عنوان عنصری از ترکیب‌بندی برای پُر کردن صفحه و ارائهٔ اولیهٔ شکل
-                                                    ظاهری و کلیِ طرح سفارش‌گرفته‌شده‌استفاده می‌کند، تا ازنظر گرافیکی
-                                                    نشانگر چگونگی نوع</p>
+                                                <p>طرح‌نما یا لورم ایپسوم به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به‌عنوان عنصری از ترکیب‌بندی برای پُر کردن صفحه و ارائهٔ اولیهٔ شکل ظاهری و کلیِ
+                                                    طرح سفارش‌گرفته‌شده‌استفاده می‌کند، تا ازنظر گرافیکی نشانگر چگونگی نوع
+                                                </p>
                                                 <div class="info-bks">
                                                     <ul>
                                                         <li>
-                                                            <i class="fa fa-user-circle" aria-hidden="true"></i>
-                                                            رضا ترابی
+                                                            <i class="fa fa-user-circle" aria-hidden="true"></i> رضا ترابی
                                                         </li>
                                                         <li>
-                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                            20 خرداد 1399
+                                                            <i class="fa fa-calendar" aria-hidden="true"></i> 20 خرداد 1399
                                                         </li>
                                                         <li>
-                                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                                            15:09
-                                                        </li>
-                                                    </ul>
-                                                    <button class="btn btn-success"><i class="fa fa-download"
-                                                            aria-hidden="true"></i>
-                                                        دریافت</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="carousel-item">
-                                <section class="s-books">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="img-bks">
-                                                <img src="images/b1.jpg" alt="" srcset="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="main-bks">
-                                                <h3>دریافت کتاب آموزش جنگو</h3>
-                                                <p>طرح‌نما یا لورم ایپسوم به متنی آزمایشی و بی‌معنی در صنعت چاپ،
-                                                    صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن
-                                                    به‌عنوان عنصری از ترکیب‌بندی برای پُر کردن صفحه و ارائهٔ اولیهٔ شکل
-                                                    ظاهری و کلیِ طرح سفارش‌گرفته‌شده‌استفاده می‌کند، تا ازنظر گرافیکی
-                                                    نشانگر چگونگی نوع</p>
-                                                <div class="info-bks">
-                                                    <ul>
-                                                        <li>
-                                                            <i class="fa fa-user-circle" aria-hidden="true"></i>
-                                                            رضا ترابی
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                            20 خرداد 1399
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                                            15:09
+                                                            <i class="fa fa-clock-o" aria-hidden="true"></i> 15:09
                                                         </li>
                                                     </ul>
                                                     <button class="btn btn-success"><i class="fa fa-download"
@@ -131,34 +43,103 @@
                                 </section>
                             </div>
                         </div>
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
+                        <div class="carousel-item active">
+                            <section class="s-books">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="img-bks">
+                                            <img src="images/b1.jpg" alt="" srcset="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="main-bks">
+                                            <h3>دریافت کتاب آموزش جنگو</h3>
+                                            <p>طرح‌نما یا لورم ایپسوم به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به‌عنوان عنصری از ترکیب‌بندی برای پُر کردن صفحه و ارائهٔ اولیهٔ شکل ظاهری و کلیِ طرح
+                                                سفارش‌گرفته‌شده‌استفاده می‌کند، تا ازنظر گرافیکی نشانگر چگونگی نوع</p>
+                                            <div class="info-bks">
+                                                <ul>
+                                                    <li>
+                                                        <i class="fa fa-user-circle" aria-hidden="true"></i> رضا ترابی
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-calendar" aria-hidden="true"></i> 20 خرداد 1399
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-clock-o" aria-hidden="true"></i> 15:09
+                                                    </li>
+                                                </ul>
+                                                <button class="btn btn-success"><i class="fa fa-download"
+                                                        aria-hidden="true"></i>
+                                                    دریافت</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item">
+                            <section class="s-books">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="img-bks">
+                                            <img src="images/b1.jpg" alt="" srcset="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="main-bks">
+                                            <h3>دریافت کتاب آموزش جنگو</h3>
+                                            <p>طرح‌نما یا لورم ایپسوم به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به‌عنوان عنصری از ترکیب‌بندی برای پُر کردن صفحه و ارائهٔ اولیهٔ شکل ظاهری و کلیِ طرح
+                                                سفارش‌گرفته‌شده‌استفاده می‌کند، تا ازنظر گرافیکی نشانگر چگونگی نوع</p>
+                                            <div class="info-bks">
+                                                <ul>
+                                                    <li>
+                                                        <i class="fa fa-user-circle" aria-hidden="true"></i> رضا ترابی
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-calendar" aria-hidden="true"></i> 20 خرداد 1399
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-clock-o" aria-hidden="true"></i> 15:09
+                                                    </li>
+                                                </ul>
+                                                <button class="btn btn-success"><i class="fa fa-download"
+                                                        aria-hidden="true"></i>
+                                                    دریافت</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
                     </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
                 </div>
             </div>
-
         </div>
+
     </div>
-    <!-- بخش اصلی -->
-    <div class="container">
-        <div class="row ">
-            <div class="col-12">
-                <div class="box-abt">
-                    <div class="row">
-                        <div class="col-md-8">
-                         {% for ar in articles %}
-                         <section class="s-post">
+</div>
+<!-- بخش اصلی -->
+<div class="container">
+    <div class="row ">
+        <div class="col-12">
+            <div class="box-abt">
+                <div class="row">
+                    <div class="col-md-8">
+                        {% for ar in articles %}
+                        <section class="s-post">
                             <div class="ttl-post">
-                                <h2 class="h-post"><a href="{% url 'blog:detail_article' ar.slug %}">{{ar.title}}</a>!</h2>
+                                <h2 class="h-post"><a href="{% url 'blog:detail_article' ar.slug %}">{{ar.title}}</a>!
+                                </h2>
                             </div>
                             <img src="{{ ar.thumbnail.url }}" alt="">
                             <div class="tags">
                                 {% for cat in ar.category_published.all %}
-                                <a href="{% url 'blog:category_list' cat.slug %}" class="nav-post">{{cat.title}}</a>
-                                {% endfor %}
+                                <a href="{% url 'blog:category_list' cat.slug %}" class="nav-post">{{cat.title}}</a> {% endfor %}
                             </div>
                             <p>
                                 {{ar.body|truncatewords:60}}
@@ -168,16 +149,13 @@
                                     <div class="col-md-10">
                                         <ul>
                                             <li>
-                                                <i class="fa fa-user-circle" aria-hidden="true"></i>
-                                                رضا ترابی
+                                                <i class="fa fa-user-circle" aria-hidden="true"></i> رضا ترابی
                                             </li>
                                             <li>
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                {{ ar.jpublish}}
+                                                <i class="fa fa-calendar" aria-hidden="true"></i> {{ ar.jpublish}}
                                             </li>
                                             <li>
-                                                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                                {{ar.jTimepublish}}
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i> {{ar.jTimepublish}}
                                             </li>
                                         </ul>
                                     </div>
@@ -187,67 +165,83 @@
                                 </div>
                             </div>
                         </section>
-                         {% endfor %}
-                            <div class="col-12 pagging">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#" class="a-active">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">6</a></li>
-                                    <li><a href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
-                                </ul>
+                        {% endfor %}
+                        <!-- Paginator -->
+                        {% if articles.has_other_pages %}
+                        <div class="col-12 pagging">
+                            <ul>
+                                {% if articles.has_previous %}
+                                <li>
+                                    <a href="{% url 'blog:home' articles.previous_page_number %}">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </li>
+                                {% else %}
+                                <li><i class="fa fa-arrow-right a-active" aria-hidden="true"></i></li>
+                                {% endif %} {% for i in articles.paginator.page_range %} {% if articles.number == i %}
+                                <li><span class="a-active">{{ i }}</span></li>
+                                {% else %}
+                                <li><a href="{% url 'blog:home' %}page/{{ i }}">{{ i }}</a></li>
+                                {% endif %} {% endfor %} {% if articles.has_next %}
+                                <li>
+                                    <a href="{% url 'blog:home' articles.next_page_number %}">
+                                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                {% else %}
+                                <li><i class="fa fa-arrow-left a-active" aria-hidden="true"></i></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                        <!-- end paginator -->
+                    </div>
+                    <div class="col-md-4">
+                        <aside>
+                            <img src="{% static 'images/user.jpg' %}" alt="">
+                            <p>
+                                در این پست می خواهم تجربه های خودم در این دو سال و چند ماهی که درگیر برنامه نویسی اندروید هستم را با شما در میان بگذارم. ابتدا چند تا توصیه برای کسانی که به امید یک شبه ره صد ساله را رفتن به سمت این شغل آمده اند دارم. برنامه نویسی یکی از سخت ترین مشاغل
+                                دنیاست و روز به روز هم به جای آسانتر شدن به سمت سخت تر شدن حرکت می کند.
+                            </p>
+                            <div class="frm-srch">
+                                <form action="post">
+                                    <input type="text" name="" placeholder="جستجو..." id="">
+                                    <button><i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </form>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <aside>
-                                <img src="{% static 'images/user.jpg' %}" alt="">
-                                <p>
-                                    در این پست می خواهم تجربه های خودم در این دو سال و چند ماهی که درگیر برنامه نویسی
-                                    اندروید هستم را با شما در میان بگذارم. ابتدا چند تا توصیه برای کسانی که به امید یک
-                                    شبه ره صد ساله را رفتن به سمت این شغل آمده اند دارم. برنامه نویسی یکی از سخت ترین
-                                    مشاغل دنیاست و روز به روز هم به جای آسانتر شدن به سمت سخت تر شدن حرکت می کند.
-                                </p>
-                                <div class="frm-srch">
-                                    <form action="post">
-                                        <input type="text" name="" placeholder="جستجو..." id="">
-                                        <button><i class="fa fa-search" aria-hidden="true"></i>
-                                        </button>
-                                    </form>
-                                </div>
-                                <ul class="social-list">
-                                    <li><a href="#">
-                                            <i class="fa fa-id-card-o" aria-hidden="true"></i>
-                                            کارنامه من
-                                        </a></li>
-                                    <li><a href="#">
-                                            <i class="fa fa-code" aria-hidden="true"></i>
-                                            سفارش پروژه
-                                        </a></li>
-                                    <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i>
-                                            فیسبوکم
-                                        </a></li>
-                                    <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i>
-                                            توییترم
-                                        </a></li>
-                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
-                                            اینستاگرامم
-                                        </a></li>
-                                </ul>
-                                <ul class="links-list">
-                                    <li class="hdr-links-list"><a href="#">پیوندها</a></li>
-                                    <li><a href="#">ویکی رخداد</a></li>
-                                    <li><a href="#">میهن دانلود</a></li>
-                                    <li><a href="#">فیلم دانلود</a></li>
-                                    <li><a href="#">ویرگول</a></li>
-                                </ul>
-                            </aside>
-                        </div>
+                            <ul class="social-list">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-id-card-o" aria-hidden="true"></i> کارنامه من
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-code" aria-hidden="true"></i> سفارش پروژه
+                                    </a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                        فیسبوکم
+                                    </a></li>
+                                <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i>
+                                        توییترم
+                                    </a></li>
+                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                                        اینستاگرامم
+                                    </a></li>
+                            </ul>
+                            <ul class="links-list">
+                                <li class="hdr-links-list"><a href="#">پیوندها</a></li>
+                                <li><a href="#">ویکی رخداد</a></li>
+                                <li><a href="#">میهن دانلود</a></li>
+                                <li><a href="#">فیلم دانلود</a></li>
+                                <li><a href="#">ویرگول</a></li>
+                            </ul>
+                        </aside>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-   {% endblock %}
+</div>
+{% endblock %}
