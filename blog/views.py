@@ -4,14 +4,19 @@ this script is used to create the models for the projects app.
 Author: reza
 date: 6/28/2020
 """
+from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 from .models import Article, Category
 
 # Views
 def home(request):
+    articles_list = Article.objects.published()
+    _paginator = Paginator(articles_list, 2)
+    page = request.GET.get('page')
+    articles = _paginator.get_page(page)
     context = {
-        'articles': Article.objects.filter(status="p"),
+        'articles': articles,
     }
     return render(request, "blog/home.html", context)
 
