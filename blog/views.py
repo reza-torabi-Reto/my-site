@@ -25,8 +25,13 @@ def detail_article(request, slug):
     }
     return render(request, 'blog/single-post.html', context)
 
-def category_list(request, slug):
+def category_list(request, slug, page=1):
+    category = get_object_or_404(Category, slug=slug, status=True)
+    article_list = category.articles.published()
+    _paginator = Paginator(article_list, 2)
+    articles = _paginator.get_page(page)
     context = {
-        'category': get_object_or_404(Category, slug=slug, status=True)
+        'category':category,
+        'articles':articles
     }
     return render(request, 'blog/category.html', context)

@@ -10,8 +10,9 @@ from . views import home, detail_article, category_list
 
 app_name = "blog"
 urlpatterns = [
-       path('' ,home, name="home"),
-       path('page/<int:page>' ,home, name="home"),
+       path('', home, name="home"),
+       path('page/<int:page>', home, name="home"),
        path('post/<slug:slug>', detail_article, name="detail_article"),
        path('category/<slug:slug>', category_list, name="category_list"),
+       path('category/<slug:slug>/page/<int:page>', category_list, name="category_list")
 ]

@@ -149,7 +149,7 @@
                 <div class="box-abt">
                     <div class="row">
                         <div class="col-md-8">
-                         {% for ar in category.articles.published %}
+                         {% for ar in articles %}
                          <h1>{{name}}</h1>
                          <section class="s-post">
                             <div class="ttl-post">
@@ -189,18 +189,56 @@
                             </div>
                         </section>
                          {% endfor %}
-                            <div class="col-12 pagging">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#" class="a-active">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">6</a></li>
-                                    <li><a href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
+                            
+                       <!-- Paginator -->
+                       {% if articles.has_other_pages %}
+                       <div class="col-12 pagging">
+                           <ul>
+                            <li>
+                            {% if articles.number != 1 %}
+                            <a href="{% url 'blog:category_list' category.slug %}"><i class="fa fa-angle-double-right"></i></a>
+                            {% else %}
+                            <i class="fa fa-angle-double-right text-secondary"></i>
+                            {% endif %}
+                            </li>
+                               {% if articles.has_previous %}
+                               <li>
+                                   <a href="{% url 'blog:category_list' category.slug articles.previous_page_number %}">
+                                       <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                               </li>
+                               {% else %}
+                               <li><i class="fa fa-angle-right text-secondary" aria-hidden="true"></i></li>
+                               {% endif %}
+
+                               {% for i in articles.paginator.page_range %} 
+                               {% if articles.number == i %}
+                                <li><span class="a-active">{{ i }}</span></li>
+                                {% else %}
+                                <li><a href="{% url 'blog:home' %}category/{{category.slug}}/page/{{ i }}">{{ i }}</a></li>
+                                {% endif %} {% endfor %}
+
+                               {% if articles.has_next %}
+                               <li>
+                                   <a href="{% url 'blog:category_list' category.slug articles.next_page_number %}">
+                                       <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                   </a>
+                               </li>
+                               {% else %}
+                               <li><i class="fa fa-angle-left text-secondary" aria-hidden="true"></i></li>
+                                {% endif %}
+                                <li>
+                                    {% if articles.number != articles.paginator.num_pages %}
+                                    <a href="{% url 'blog:category_list' category.slug articles.paginator.num_pages %}">
+                                        <i class="fa fa-angle-double-left"></i></a>
+                                    {% else %}
+                                    <i class="fa fa-angle-double-left text-secondary"></i>
+                                    {% endif %}
+                                   </li>
+                                </li>
+                           </ul>
+                       </div>
+                       {% endif %}
+                       <!-- end paginator -->
                         </div>
                         <div class="col-md-4">
                             <aside>
