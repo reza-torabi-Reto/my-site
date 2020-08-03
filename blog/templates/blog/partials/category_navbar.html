@@ -4,21 +4,19 @@
             <a class="nav-link white" href="{% url 'blog:home' %}">خانه</a>
         </li>
         {% for cat in category %}
-        <li class="nav-item">
-            <a class="nav-link white" href="{% url 'blog:category_list' cat.slug %}">{{cat.title}}</a>
+        {% if cat.parent == None %}
+        <li class="nav-item {% if cat.children.active %} dropdown {% endif %}">
+            <a {% if cat.children.all %} id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %} class="nav-link white {% if cat.children.active %} dropdown-toggle  {% endif %}" href="{% url 'blog:category_list' cat.slug %}">{{cat.title}}
+            {% if cat.children.active %}
+             <i class="fa fa-chevron-down" aria-hidden="true"></i> 
+            {% endif %}
+        </a>
+        {% if cat.children.active %} 
+            {% include 'blog/partials/category_loop.html' %}
+        {% endif %}
         </li>
+        {% endif %}
         {% endfor %}
-        <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle white" href="#" id="navbarDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                آموزش ها
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item green-1 font-13" href="#">برنامه نویسی</a>
-                <a class="dropdown-item green-1 font-13" href="#">هک و امنیت</a>
-                <a class="dropdown-item green-1 font-13" href="#">طراحی گرافیک</a>
-            </div>
-        </li> -->
     </ul>
 </div>

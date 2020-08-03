@@ -3,7 +3,7 @@ from . models import Article, Category
 
 # Register your models here.
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('posision','title','slug','status')
+    list_display = ('posision','title','slug','parent','status')
     list_filter = ('status',)
     search_fields = ('title','slug')
     prepopulated_fields = {'slug':('title',)}

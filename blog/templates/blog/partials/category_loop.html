@@ -1,0 +1,8 @@
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    {% for cat in cat.children.active %}
+    <a class="dropdown-item green-1 font-13" href="{% url 'blog:category_list' cat.slug %}">{{cat.title}}</a>
+    {% if cat.children.active %} 
+            {% include 'blog/partials/category_loop.html' %}
+        {% endif %}
+    {% endfor%}
+</div>
