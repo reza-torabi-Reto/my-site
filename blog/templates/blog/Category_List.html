@@ -149,7 +149,7 @@
                 <div class="box-abt">
                     <div class="row">
                         <div class="col-md-8">
-                         {% for ar in articles %}
+                         {% for ar in object_list %}
                          <h1>{{name}}</h1>
                          <section class="s-post">
                             <div class="ttl-post">
@@ -196,14 +196,14 @@
                            <ul>
                             <li>
                             {% if articles.number != 1 %}
-                            <a href="{% url 'blog:category_list' category.slug %}"><i class="fa fa-angle-double-right"></i></a>
+                            <a href="{% url 'blog:CategoryList' category.slug %}"><i class="fa fa-angle-double-right"></i></a>
                             {% else %}
                             <i class="fa fa-angle-double-right text-secondary"></i>
                             {% endif %}
                             </li>
                                {% if articles.has_previous %}
                                <li>
-                                   <a href="{% url 'blog:category_list' category.slug articles.previous_page_number %}">
+                                   <a href="{% url 'blog:CategoryList' category.slug articles.previous_page_number %}">
                                        <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                </li>
                                {% else %}
@@ -214,12 +214,12 @@
                                {% if articles.number == i %}
                                 <li><span class="a-active">{{ i }}</span></li>
                                 {% else %}
-                                <li><a href="{% url 'blog:home' %}category/{{category.slug}}/page/{{ i }}">{{ i }}</a></li>
+                                <li><a href="{% url 'blog:CategoryList' %}category/{{category.slug}}/page/{{ i }}">{{ i }}</a></li>
                                 {% endif %} {% endfor %}
 
                                {% if articles.has_next %}
                                <li>
-                                   <a href="{% url 'blog:category_list' category.slug articles.next_page_number %}">
+                                   <a href="{% url 'blog:CategoryList' category.slug articles.next_page_number %}">
                                        <i class="fa fa-angle-left" aria-hidden="true"></i>
                                    </a>
                                </li>
@@ -228,7 +228,7 @@
                                 {% endif %}
                                 <li>
                                     {% if articles.number != articles.paginator.num_pages %}
-                                    <a href="{% url 'blog:category_list' category.slug articles.paginator.num_pages %}">
+                                    <a href="{% url 'blog:CategoryList' category.slug articles.paginator.num_pages %}">
                                         <i class="fa fa-angle-double-left"></i></a>
                                     {% else %}
                                     <i class="fa fa-angle-double-left text-secondary"></i>
