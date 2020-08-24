@@ -5,6 +5,7 @@ Author: reza
 date: 6/28/2020
 """
 from django.core.paginator import Paginator
+from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
@@ -14,7 +15,7 @@ from .models import Article, Category
 class ArticleList(ListView):
     """Demonstrates docstrings and does nothing really."""
     queryset = Article.objects.published()
-    paginate_by = 5
+    paginate_by = 3
 
 
 class ArticleDetail(DetailView):
@@ -26,7 +27,7 @@ class ArticleDetail(DetailView):
 
 class CategoryList(ListView):
     """Demonstrates docstrings and does nothing really."""
-    paginate_by = 5
+    paginate_by = 2
     template_name = 'blog/category_list.html'
 
     def get_queryset(self):
@@ -40,6 +41,22 @@ class CategoryList(ListView):
         context['category'] = category
         return context
 
+
+class AuthorList(ListView):
+    """Demonstrates docstrings and does nothing really."""
+    paginate_by = 2
+    template_name = 'blog/author_list.html'
+
+    def get_queryset(self):
+        global author 
+        username = self.kwargs.get('username')
+        author = get_object_or_404(User, username=username)
+        return author.articles.published()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['author'] = author
+        return context
 
 
 

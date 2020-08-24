@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.utils import timezone
 from django.utils.html import format_html
 from extensions.utils import jalali_convert, peersian_time
@@ -37,6 +38,7 @@ class Article(models.Model):
         ('d','پیش‌نویس'),
         ('p','نمایش داده شده'),
     )
+    author = models.ForeignKey(User, null=True, on_delete=models.SET_NULL, related_name='articles', verbose_name='نویسنده')
     category = models.ManyToManyField(Category, verbose_name = 'دسته‌بندی', related_name="articles")
     title = models.CharField(max_length=200, verbose_name ='سرنام')
     slug = models.SlugField(max_length=100,unique=True, verbose_name ='نامک')
@@ -64,9 +66,6 @@ class Article(models.Model):
         return peersian_time(self.publish)    
     jpublish.short_description = 'تاریخ انتشار'
 
-    def category_published(self):
-        return self.category.filter(status=True)
-    
     def thumbnail_tag(self):
         return format_html("<img style='width:100px; height:50px;border-radius:5px;' src='{}'>".format(self.thumbnail.url))
 
