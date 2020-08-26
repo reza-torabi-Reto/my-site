@@ -1,0 +1,8 @@
+.errors_login{
+    text-align: justify;
+    color: red;
+    font-size: 13px;
+    background: #faf5f5;
+    padding: 10px;
+    border-radius: 4px;
+}
