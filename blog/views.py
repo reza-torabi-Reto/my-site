@@ -5,7 +5,7 @@ Author: reza
 date: 6/28/2020
 """
 from django.core.paginator import Paginator
-from django.contrib.auth.models import User
+from account.models import User
 from django.views.generic import ListView, DetailView
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render

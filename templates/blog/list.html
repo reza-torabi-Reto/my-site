@@ -163,7 +163,7 @@
                                 {% endfor %}
                             </div>
                             <p>
-                                {{ar.body|truncatewords:60}}
+                                {{ar.body|striptags|truncatewords:60}}
                             </p>
                             <div class="ftr-post">
                                 <div class="row">

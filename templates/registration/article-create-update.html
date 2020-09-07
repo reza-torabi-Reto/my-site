@@ -1,0 +1,57 @@
+{% extends 'registration/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% block title-meta %} بخش جستارها {% endblock %}{% endblock %}
+{% block main %} 
+<div class="col-md-12">
+    <!-- general form elements -->
+    <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title float-left">افزودن مقاله</h3>
+      </div>
+    </div>
+   <form enctype="multipart/form-data" method="POST">
+       {% csrf_token %}
+       <div class="row">
+        <div class="col-md-12">
+            {{ form.title|as_crispy_field }}
+        </div>
+        <div class="col-md-6">
+            {{ form.slug|as_crispy_field }}
+        </div>
+        <div class="col-md-6">
+            {{ form.author|as_crispy_field }}
+            </div>
+        <div class="col-md-12">
+            {{ form.body|as_crispy_field }}
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-12">
+                    {{ form.category|as_crispy_field }}
+                </div>
+                <div class="col-12">
+                    {{ form.thumbnail|as_crispy_field }}
+                </div>
+            </div>
+        </div> 
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-12">
+                    {{ form.status|as_crispy_field }}
+                </div>
+                <div class="col-12">
+                    {{ form.publish|as_crispy_field }}
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="box_btn_add_post" style="width: 100%; text-align: left; margin: 10px 0;">
+                <button class="btn btn-success flout-left">درج جستار</button>
+            </div>
+        </div>
+    </div>
+       
+   </form>
+</div>
+{% endblock %}

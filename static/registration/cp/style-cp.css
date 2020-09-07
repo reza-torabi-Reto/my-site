@@ -1,0 +1,17 @@
+td{
+    font-size: 12px!important;
+}
+table img{
+    width: 100px;
+    height: 75px;
+    border-radius: 5px;
+}
+table .badge{
+    padding: 5px 3px;
+}
+
+.box_btn_add_post {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+}

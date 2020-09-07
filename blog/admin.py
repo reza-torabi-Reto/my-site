@@ -51,10 +51,6 @@ class ArticleAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     actions = [make_published, make_draft]
 
-    def category_to_str(self, obj):
-        return "، ".join([category.title for category in obj.category.active()])
-
-    category_to_str.short_description = 'دسته‌بندی'
 
 
 admin.site.register(Article, ArticleAdmin)

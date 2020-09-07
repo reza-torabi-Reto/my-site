@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.urls import reverse
+from account.models import User
 from django.utils import timezone
 from django.utils.html import format_html
 from extensions.utils import jalali_convert, peersian_time
@@ -58,6 +59,9 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        return reverse("account:home")
 
     def jpublish(self):
         return jalali_convert(self.publish)
@@ -69,5 +73,10 @@ class Article(models.Model):
     def thumbnail_tag(self):
         return format_html("<img style='width:100px; height:50px;border-radius:5px;' src='{}'>".format(self.thumbnail.url))
 
+    def category_to_str(self):
+        return "، ".join([category.title for category in self.category.active()])
+    
+    category_to_str.short_description = 'دسته‌بندی'
+    
     objects = ArticleManager()
 # ----->
