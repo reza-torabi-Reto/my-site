@@ -8,6 +8,7 @@
       <div class="card">
         <!-- /.card-header -->
         <div class="card-body table-responsive p-0">
+          {% if object_list %}
           <table class="table table-hover">
             <thead>
               <tr>
@@ -23,7 +24,13 @@
             <tbody>
                 {% for ar in object_list %} 
                     <tr>
-                      <td>{{ar.title}}</td>
+                      <td>
+                        {% if ar.status == 'd' or user.is_superuser %}
+                            <a href="{% url 'account:article-update' ar.pk %}">{{ar.title}}</a>
+                        {% else %}
+                            {{ar.title}}
+                        {% endif %}
+                      </td>
                       <td><img src="{{ ar.thumbnail.url }}" alt="{{ar.title}}"></td>
                       <td>{{ ar.author.get_full_name }}</td>
                       <td>{{ ar.category_to_str }}</td>
@@ -36,11 +43,18 @@
                           {% else %}
                           <span class="badge badge-danger">پیش‌نویس</span>
                           {% endif %}
+
+                          {% if user.is_superuser %}
+                              <a class="badge badge-danger" href="{% url 'account:article-delete' ar.pk %}">پاک کردن</a>
+                          {% endif %}
                       </td>
                     </tr>
                 {% endfor %}
             </tbody>
           </table>
+          {% else %}
+              <p>نوشتاری برای نمایش وجود ندارد</p>
+          {% endif %}
         </div>
         <!-- /.card-body -->
       </div>

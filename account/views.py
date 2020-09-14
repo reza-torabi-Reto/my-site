@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
+from .mixins import FieldsMixin, FormValidMixin, AuthorAccessMixin, SuperUserAccessMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from blog.models import Article
 
 # Create your views here.
@@ -14,8 +16,16 @@ class ArticleList(LoginRequiredMixin, ListView):
             return Article.objects.filter(author = self.request.user)
 
 
-class ArticleCreate(LoginRequiredMixin, CreateView):
+class ArticleCreate(LoginRequiredMixin,FieldsMixin, FormValidMixin, CreateView):
     model = Article
-    fields = ["author", "category", "title", "slug", "body", "thumbnail", "publish", "status"]
     template_name = 'registration/article-create-update.html'
+
+class ArticleUpdate(AuthorAccessMixin, FieldsMixin, FormValidMixin, UpdateView):
+    model = Article
+    template_name = 'registration/article-create-update.html'
+
+class ArticleDelete(SuperUserAccessMixin, DeleteView):
+    model = Article
+    success_url = reverse_lazy('account:home')
+    template_name = 'registration/article-comform-delete.html'
     
