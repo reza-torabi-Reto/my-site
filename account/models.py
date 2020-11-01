@@ -3,6 +3,9 @@ from django.utils import timezone
 from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
+
+# Users: reza Pass: 123, mehdi pass: M3hdi!@34, roya pass: R0y4!@34
+
 class User(AbstractUser):
     is_author = models.BooleanField(default=False, verbose_name='وضعیت نویسندگی')
     special_user = models.DateTimeField(default=timezone.now, verbose_name='کاربر ویژه تا')

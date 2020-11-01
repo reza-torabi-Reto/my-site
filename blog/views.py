@@ -10,7 +10,7 @@ from django.views.generic import ListView, DetailView
 from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 from .models import Article, Category
-
+from account.mixins import AuthorAccessMixin
 # Views
 class ArticleList(ListView):
     """Demonstrates docstrings and does nothing really."""
@@ -23,6 +23,12 @@ class ArticleDetail(DetailView):
     def get_object(self):
         slug = self.kwargs.get('slug')
         return get_object_or_404(Article.objects.published(), slug=slug)
+
+class ArticlePreview(AuthorAccessMixin, DetailView):
+    """Demonstrates docstrings and does nothing really."""
+    def get_object(self):
+        pk = self.kwargs.get('pk')
+        return get_object_or_404(Article, pk=pk)
 
 
 class CategoryList(ListView):

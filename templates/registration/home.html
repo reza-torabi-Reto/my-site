@@ -41,7 +41,7 @@
                               <span class="badge badge-success">منتشر شده</span>
                               <a href="{% url 'blog:detail_article' ar.slug %}" class="badge badge-primary" target="_blank">نمایش جستار</a>
                           {% else %}
-                          <span class="badge badge-danger">پیش‌نویس</span>
+                          <a href="{% url 'blog:preview_article' ar.pk %}" class="badge badge-secondary" target="_blank">پیش‌نمایش</a>
                           {% endif %}
 
                           {% if user.is_superuser %}
